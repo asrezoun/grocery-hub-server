@@ -31,7 +31,7 @@ client.connect(err => {
   //get data 
   app.get('/products', (req, res) => {
 
-    productCollection.find()
+    productCollection.find({})
     .toArray((err, items)=>{
       res.send(items);
       //console.log("datas are: ", items);
